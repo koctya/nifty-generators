@@ -1,9 +1,18 @@
 $primary_color: #4b7399
 
+$bg1_color: #ccffcc
+$bg2_color: #ffcccc
+$bg3_color: #f0f0f0
+$bg4_color: #cc0000
+
+$brdr1_color: #66cc66
+$brdr2_color: #cc6666
+$brdr3_color: #cf0000
+
 body
   background-color: $primary_color
   font:
-    family: Verdana, Helvetica, Arial
+    family: "New Century Schoolbook", Times, serif 
     size: 14px
 
 a
@@ -31,21 +40,21 @@ a
   margin: 10px 0
 
 #flash_notice
-  background-color: #ccffcc
-  border: solid 1px #66cc66
+  background-color: $bg1_color
+  border: solid 1px $brdr1_color
 
 #flash_error,
 #flash_alert
-  background-color: #ffcccc
-  border: solid 1px #cc6666
+  background-color: $bg2_color
+  border: solid 1px $brdr2_color
 
 .error_messages
   width: 400px
-  border: 2px solid #cf0000
+  border: 2px solid $brdr3_color
   padding: 0
   padding-bottom: 12px
   margin-bottom: 20px
-  background-color: #f0f0f0
+  background-color: $bg3_color
   font:
     size: 12px
   h2
@@ -55,7 +64,7 @@ a
     font:
       weight: bold
       size: 12px
-    background-color: #cc0000
+    background-color: $bg4_color
     color: white
   p
     margin: 8px 10px
