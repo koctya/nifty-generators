@@ -1,3 +1,9 @@
+0.5.0 (October 26, 2012)
+- forked from Ryan Bates version
+- updated to Rails 3.1.x
+- changed default template to haml/sass
+- changed README to markdown
+
 0.4.6 (March 26, 2011)
 
 * fixing form block in HAML (thanks apocalyptiq)
