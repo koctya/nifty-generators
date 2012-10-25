@@ -93,6 +93,7 @@ Unfortunately I have not had time to actively work on this project recently. If 
 - forked from ryanb version
 - updated to rails 3.1.x
 - changed default template to haml/sass
+- changed README to markdown
 
 
 ## Found a bug?
