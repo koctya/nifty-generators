@@ -13,13 +13,13 @@ Description:
 Examples:
     script/generate nifty_layout
 
-        Layout:     app/views/layouts/application.html.erb
-        Stylesheet: public/stylesheets/application.css
+        Layout:     app/views/layouts/application.html.haml
+        Stylesheet: public/stylesheets/application.sass
         Helper:     app/helpers/layout_helper.rb
 
 
     script/generate nifty_layout admin
 
-        Layout:     app/views/layouts/admin.html.erb
-        Stylesheet: public/stylesheets/admin.css
+        Layout:     app/views/layouts/admin.html.haml
+        Stylesheet: public/stylesheets/admin.sass
         Helper:     app/helpers/layout_helper.rb

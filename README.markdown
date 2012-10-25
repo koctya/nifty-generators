@@ -1,11 +1,11 @@
-= Nifty Generators
+# Nifty Generators
 
 A collection of useful Rails generator scripts for scaffolding, layout files, authentication, and more.
 
 
-== Setup
+## Setup
 
-=== Rails 3
+### Rails 3.1
 
 Add the gem to your Gemfile.
 
@@ -15,34 +15,23 @@ Then you can run any of the included generators.
 
   rails g nifty:scaffold Recipe name:string index new
 
-=== Rails 2
+### Rails 3.0, 2.x 
+Try using Ryanb's version at http://github.com/ryanb/nifty-generators
+### Included Generators
 
-First install the gem.
-
-  gem install nifty-generators
-
-The generators will be available in all Rails applications. To run the generator, go to your rails project directory and call it using the script/generate or script/destroy command.
-
-  script/generate nifty_scaffold Recipe name:string index new
-
-Note an underscore is used instead of a colon for the Rails 2 generators.
-
-
-== Included Generators
-
-* nifty:layout: generates generic layout, stylesheet, and helper files.
-* nifty:scaffold: generates a controller and optional model/migration.
-* nifty:config: generates a config YAML file and loader.
-* nifty:authentication: generates user model with sign up and log in.
+- nifty:layout: generates generic layout, stylesheet, and helper files.
+- nifty:scaffold: generates a controller and optional model/migration.
+- nifty:config: generates a config YAML file and loader.
+- nifty:authentication: generates user model with sign up and log in.
 
 To view the README for each generator, run it with the +help+ option.
 
-  rails g nifty:layout --help
+    rails g nifty:layout --help
 
 
-== Troubleshooting and FAQs
+## Troubleshooting and FAQs
 
-<b>What is the difference between nifty:scaffold and built-in scaffold?</b>
+**What is the difference between nifty:scaffold and built-in scaffold?**
 
 One of the primary differences is that nifty:scaffold allows you to choose which controller actions to generate.
 
@@ -95,19 +84,25 @@ Make sure you have mocha installed and require it in your spec/test helper.
 Also, make sure you're using Rails 2.1 or greater.
 
 
-== Project Status
+## Project Status
 
 Unfortunately I have not had time to actively work on this project recently. If you find a critical issue where it does not work as documented please {ping me on Twitter}[http://twitter.com/rbates] and I'll take a look.
 
+## Changelog
+#### 0.4.8
+- forked from ryanb version
+- updated to rails 3.1.x
+- changed default template to haml/sass
 
-== Found a bug?
+
+## Found a bug?
 
 If you are having a problem with Nifty Generators, first look at the FAQs above. If you still cannot resolve it, please submit an issue here.
 
 http://github.com/ryanb/nifty-generators/issues
 
 
-== Development
+## Development
 
 If you want to contribute to this project, you can download the Git repository and get the Cucumber features running by calling +bundle+ then +rake+. I normally develop this using Ruby 1.9.2 however it should work with 1.8.7 as well.
 

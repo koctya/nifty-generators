@@ -7,16 +7,16 @@ class NiftyLayoutGenerator < Rails::Generator::Base
   def manifest
     record do |m|
       m.directory 'app/views/layouts'
-      m.directory 'public/stylesheets'
+      m.directory 'app/assets/stylesheets'
       m.directory 'app/helpers'
 
       if options[:haml]
+        m.template "layout.html.erb", "app/views/layouts/#{file_name}.html.erb"
+        m.file     "stylesheet.css",  "app/assets/stylesheets/#{file_name}.css"
+      else
         m.directory 'public/stylesheets/sass'
         m.template "layout.html.haml", "app/views/layouts/#{file_name}.html.haml"
-        m.file     "stylesheet.sass",  "public/stylesheets/sass/#{file_name}.sass"
-      else
-        m.template "layout.html.erb", "app/views/layouts/#{file_name}.html.erb"
-        m.file     "stylesheet.css",  "public/stylesheets/#{file_name}.css"
+        m.file     "stylesheet.sass",  "app/assets/stylesheets/#{file_name}.sass"
       end
       m.file "helper.rb", "app/helpers/layout_helper.rb"
     end
@@ -31,7 +31,7 @@ class NiftyLayoutGenerator < Rails::Generator::Base
     def add_options!(opt)
       opt.separator ''
       opt.separator 'Options:'
-      opt.on("--haml", "Generate HAML for view, and SASS for stylesheet.") { |v| options[:haml] = v }
+      opt.on("--erb", "Generate HAML for view, and SASS for stylesheet.") { |v| options[:erb] = v }
     end
 
     def banner
